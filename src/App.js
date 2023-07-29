@@ -4,6 +4,7 @@ import {
   ReactComponent as Telegram 
 } from './assets/telegram.svg'
 import { ReactComponent as Mail } from './assets/mail.svg'
+import ContactCard from './ContactCard'
 
 function App() {
   return (
@@ -13,12 +14,9 @@ function App() {
       </div>
       <div className='Main'>
         <div className='Back'>
-          <div className='Card'>
-            <div className='Icon-Box'>
-              <Github/>
-            </div>
-            <span className='Text'>/mi6e4ka</span>
-          </div>
+          <ContactCard Icon={Github} name={"/mi6e4ka"} />
+          <ContactCard Icon={Telegram} name={"@mi6e4ka"} />
+          <ContactCard Icon={Mail} name={"me@mi6e4ka.dev"} />
         </div>
       </div>
     </div>
