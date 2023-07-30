@@ -14,40 +14,75 @@ body {
   font-family: "Light";
   height: 100vh;
   width: 100vw;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+}
+
+.Footer small {
+  text-align: center;
 }
 
 .Header {
-  color: white;
   width: 100vw;
   height: 100px;
-  text-align: center;
-  vertical-align: middle;
+  margin: 0;
   line-height: 100px;
   font-size: 24px;
 }
 
+.Main {
+  min-width: 300px;
+}
+
 .Back {
   margin: 0px 15px;
-  height: calc(100vh - 100px - 60px);
+  height: fit-content;
   padding: 20px 15px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background: rgba(217, 217, 217, 0.30);
   border-radius: 40px;
   box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(7.5px);
+  min-width: 320px;
+  max-width: 350px;
+  max-height: calc(100vh - 100px - 60px);
 }
 
 .Card {
   margin-bottom: 15px;
   width: 100%;
   height: 110px;
-  background: rgba(217, 217, 217, 0.21);
+  background: rgba(217, 217, 217, 0.20);
   border-radius: 40px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   align-content: center;
+  transition: .2s linear;
+  overflow: hidden;
+  animation: Card-Show 1s ease-out;
   /*backdrop-filter: blur(5px);*/
+}
+
+.Card:hover {
+  background: rgba(217, 217, 217, 0.50);
+  box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 10px;
+}
+
+@keyframes Card-Show {
+  0% {width: 90px;}
+  100% {width: 100%;}
 }
 
 .Card .Icon-Box {
@@ -56,7 +91,40 @@ body {
 }
 
 .Card .Text {
-  color: white;
-  font-size: 24px;
   overflow-wrap: break-word;
+}
+
+.Source-Link {
+  color: white;
+}
+
+.Link-Icon {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+}
+
+.Card-Link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* phones */
+@media (max-width: 410px) {
+  .Footer {
+    bottom: 2px;
+  }
+}
+
+/* tablets and pc/notebook */
+@media (min-width: 410px) {
+  .Card .Text {
+    font-size: 100%;
+  }
+  .Back {
+    margin: auto;
+  }
+  .Footer {
+    bottom: 15px;
+  }
 }

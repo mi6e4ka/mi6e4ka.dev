@@ -1,0 +1,8 @@
+node_modules
+.git
+.DS_Store
+.env
+docker
+.gitignore
+package-lock.json
+README.md

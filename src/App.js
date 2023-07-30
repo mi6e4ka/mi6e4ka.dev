@@ -1,23 +1,35 @@
 import './index.css'
+import contacts from './contacts'
 import { ReactComponent as Github } from './assets/github.svg'
-import { 
-  ReactComponent as Telegram 
-} from './assets/telegram.svg'
-import { ReactComponent as Mail } from './assets/mail.svg'
 import ContactCard from './ContactCard'
 
 function App() {
+  let contactCards = [];
   return (
     <div className="App">
-      <div className='Header'>
-        <span>mi6e4ka.dev</span>
-      </div>
+      <h1 className='Header'>mi6e4ka.dev</h1>
       <div className='Main'>
         <div className='Back'>
-          <ContactCard Icon={Github} name={"/mi6e4ka"} />
-          <ContactCard Icon={Telegram} name={"@mi6e4ka"} />
-          <ContactCard Icon={Mail} name={"me@mi6e4ka.dev"} />
+          {
+            contacts.map((item, index) => <ContactCard
+                Icon={item.icon}
+                name={item.name}
+                link={item.link}
+              />
+            )
+          }
         </div>
+      </div>
+      <div className='Footer'>
+        <small>by mi6e4ka</small>
+        <small>
+          <a
+            href="https://github.com/mi6e4ka/mi6e4ka.dev"
+            className='Source-Link'
+          >
+            <Github className='Link-Icon'/>
+            source</a>
+        </small>
       </div>
     </div>
   );
