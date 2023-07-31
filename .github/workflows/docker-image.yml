@@ -14,16 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Log in to Docker Hub
-      uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
-      with:
-        username: ${{ secrets.DOCKER_HUB_USER }}
-        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
     - name: Build the Docker image
-      uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
-      with:
-        context: .
-        file: ./Dockerfile
-        push: true
-        tags: mi6e4ka_dev
-        labels: latest
+      run: docker build . --file Dockerfile --tag mi6e4ka_dev:$(date +%s)
+    - name: Login docker hub
+      run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login --username "${{ secrets.DOCKER_HUB_USER }}" --password-stdin
+    - name: push to docker hub
+      run: docker push "mi6e4ka/mi6e4ka_dev:latest"
