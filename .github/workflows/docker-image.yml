@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag mi6e4ka/mi6e4ka_dev:$(date +%s)
+      run: docker build . --file Dockerfile --tag mi6e4ka/mi6e4ka_dev:latest
     - name: Login docker hub
       run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login --username "${{ secrets.DOCKER_HUB_USER }}" --password-stdin
     - name: push to docker hub
-      run: docker push "mi6e4ka/mi6e4ka_dev:$(date +%s)"
+      run: docker push "mi6e4ka/mi6e4ka_dev:latest"
