@@ -5,3 +5,4 @@ node_modules
 docker
 .gitignore
 README.md
+build
