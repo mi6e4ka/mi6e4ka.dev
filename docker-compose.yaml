@@ -1,0 +1,18 @@
+version: "3"
+
+networks:
+  traefik-net:
+    external: true
+
+services:
+  mi6e4ka-dev:
+    image: ghcr.io/mi6e4ka/mi6e4ka.dev
+    container_name: mi6e4ka-dev
+    restart: always
+    networks:
+      - traefik-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mi6e4ka-dev.rule=Host(`mi6e4ka.dev`)"
+      - "traefik.http.routers.mi6e4ka-dev.tls.certresolver=lecrypt"
+      - "traefik.docker.network=traefik-net"
