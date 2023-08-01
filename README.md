@@ -2,6 +2,7 @@
 
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m794923708-c6912d7bd5f0aa408df8da87)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mi6e4ka/mi6e4ka.dev/main)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mi6e4ka/mi6e4ka.dev/docker-image.yml)
 
 ## run
 
