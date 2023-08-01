@@ -4,7 +4,6 @@ import { ReactComponent as Github } from './assets/github.svg'
 import ContactCard from './ContactCard'
 
 function App() {
-  let contactCards = [];
   return (
     <div className="App">
       <h1 className='Header'>mi6e4ka.dev</h1>
@@ -28,7 +27,15 @@ function App() {
             className='Source-Link'
           >
             <Github className='Link-Icon'/>
-            source</a>
+          </a>
+        </small>
+        <small>
+          <a
+            href="https://github.com/mi6e4ka/mi6e4ka.dev"
+            className='Source-Link'
+          >
+            <span>source</span>
+          </a>
         </small>
       </div>
     </div>

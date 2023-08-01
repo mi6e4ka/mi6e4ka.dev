@@ -6,9 +6,7 @@ import { ReactComponent as Mail } from './assets/mail.svg'
 import { ReactComponent as Gitea } from './assets/gitea.svg'
 import { ReactComponent as Status } from './assets/status.svg'
 
-
-
-export default [
+const contacts = [
     {
         "icon": Github,
         "name": "/mi6e4ka",
@@ -35,3 +33,5 @@ export default [
         "link": "https://status.mi6e4ka.dev"
     }
 ]
+
+export default contacts
