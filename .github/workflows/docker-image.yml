@@ -15,8 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag mi6e4ka/mi6e4ka_dev:latest
-    - name: Login docker hub
-      run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login --username "${{ secrets.DOCKER_HUB_USER }}" --password-stdin
-    - name: push to docker hub
-      run: docker push "mi6e4ka/mi6e4ka_dev:latest"
+      run: docker build . --file Dockerfile --tag mi6e4ka.dev
+    - name: Login ghcr.io
+      run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u mi6e4ka --password-stdin
+    - name: tag
+      run: docker tag mi6e4ka.dev ghcr.io/mi6e4ka/mi6e4ka.dev:${{ github.sha }}
+    - name: push to ghcr.io
+      run: docker push ghcr.io/mi6e4ka/mi6e4ka.dev:${{ github.sha }}
