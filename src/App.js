@@ -11,6 +11,7 @@ function App() {
         <div className='Back'>
           {
             contacts.map((item, index) => <ContactCard
+                key={index}
                 Icon={item.icon}
                 name={item.name}
                 link={item.link}

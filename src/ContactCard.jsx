@@ -9,10 +9,10 @@ const ContactCard = ({Icon, name, link}) => {
     }*/
 
     return (
-        <a href={link} className='Card-Link'>
+        <a href={link} target="_blank" rel="noopener noreferrer" className='Card-Link'>
           <div className='Card'>
               <div className='Icon-Box'>
-                <Icon/>
+                <Icon width={60} height={60} className={"Icon"} />
               </div>
               <span className={'Text'} style={
                   { fontSize: fSize }
