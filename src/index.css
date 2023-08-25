@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 @font-face {
@@ -55,7 +56,7 @@ body {
   backdrop-filter: blur(7.5px);
   min-width: 320px;
   max-width: 350px;
-  max-height: calc(100vh - 100px - 60px);
+  max-height: calc(100vh - 120px - 60px);
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -135,6 +136,6 @@ body {
     margin: auto;
   }
   .Footer {
-    bottom: 15px;
+    bottom: 10px;
   }
 }
