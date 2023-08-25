@@ -34,6 +34,8 @@ function App() {
           <a
             href="https://github.com/mi6e4ka/mi6e4ka.dev"
             className='Source-Link'
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span>source</span>
           </a>
