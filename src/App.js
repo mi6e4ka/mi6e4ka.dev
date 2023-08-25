@@ -6,7 +6,7 @@ import ContactCard from './ContactCard'
 function App() {
   return (
     <div className="App">
-      <h1 className='Header'>mi6e4ka.dev</h1>
+      <h1 className='Header'>hello world!</h1>
       <div className='Main'>
         <div className='Back'>
           {
