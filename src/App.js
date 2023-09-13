@@ -1,12 +1,12 @@
 import './index.css'
-import contacts from './contacts'
+import { contacts, styles } from './settings'
 import { ReactComponent as Github } from './assets/github.svg'
 import ContactCard from './ContactCard'
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='Header'>hello world!</h1>
+    <div className="App" style={{ "background": styles.background, "font-family": styles.font }}>
+      <h1 className='Header'>{styles.header}</h1>
       <div className='Main'>
         <div className='Back'>
           {

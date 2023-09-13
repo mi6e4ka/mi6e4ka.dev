@@ -7,7 +7,7 @@ import { ReactComponent as Gitea } from './assets/gitea.svg'
 import { ReactComponent as Status } from './assets/status.svg'
 import { ReactComponent as Matrix } from './assets/matrix.svg'
 
-const contacts = [
+export const contacts = [
     {
         "icon": Github,
         "name": "/mi6e4ka",
@@ -40,4 +40,9 @@ const contacts = [
     },
 ]
 
-export default contacts
+export const styles = {
+    //background: "linear-gradient(180deg, rgba(103,0,151,1) 0%, rgba(45,0,66,1) 100%)",
+    background: "linear-gradient(180deg, rgba(103,0,151,1) 0%, rgba(45,0,66,1) 100%)",
+    header: "hello world!",
+    font: "Light",
+}
