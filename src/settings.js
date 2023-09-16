@@ -6,6 +6,7 @@ import { ReactComponent as Mail } from './assets/mail.svg'
 import { ReactComponent as Gitea } from './assets/gitea.svg'
 import { ReactComponent as Status } from './assets/status.svg'
 import { ReactComponent as Matrix } from './assets/matrix.svg'
+import { ReactComponent as Jenkins } from './assets/jenkins.svg'
 
 export const contacts = [
     {
@@ -37,6 +38,11 @@ export const contacts = [
         "icon": Status,
         "name": "status.mi6e4ka.dev",
         "link": "https://status.mi6e4ka.dev"
+    },
+    {
+        "icon": Jenkins,
+        "name": "jenkins.mi6e4ka.dev",
+        "link": "https://jenkins.mi6e4ka.dev"
     },
 ]
 
