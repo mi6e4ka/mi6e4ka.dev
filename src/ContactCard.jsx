@@ -14,9 +14,11 @@ const ContactCard = ({Icon, name, link}) => {
               <div className='Icon-Box'>
                 <Icon width={60} height={60} className={"Icon"} />
               </div>
-              <span className={'Text'} style={
-                  { fontSize: fSize }
-              }>{name}</span>
+              <nobr>
+                  <span className={'Text'} style={
+                      { fontSize: fSize }
+                  }>{name}</span>
+              </nobr>
           </div>
         </a>
     )
