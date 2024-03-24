@@ -11,38 +11,33 @@ import { ReactComponent as Jenkins } from './assets/jenkins.svg'
 export const contacts = [
     {
         "icon": Github,
-        "name": "/mi6e4ka",
+        "name": "github",
         "link": "https://github.com/mi6e4ka"
     },
     {
         "icon": Matrix,
-        "name": "@me:mi6e4ka.dev",
+        "name": "matrix",
         "link": "https://matrix.to/#/@me:mi6e4ka.dev"
     },
     {
         "icon": Telegram,
-        "name": "@mi6e4ka",
+        "name": "telegram",
         "link": "https://mi6e4ka.t.me"
     },
     {
         "icon": Mail,
-        "name": "me@mi6e4ka.dev",
+        "name": "e-mail",
         "link": "mailto:me@mi6e4ka.dev"
     },
     {
         "icon": Gitea,
-        "name": "git.mi6e4ka.dev",
+        "name": "gitea",
         "link": "https://git.mi6e4ka.dev"
     },
     {
         "icon": Status,
-        "name": "status.mi6e4ka.dev",
+        "name": "status",
         "link": "https://status.mi6e4ka.dev"
-    },
-    {
-        "icon": Jenkins,
-        "name": "jenkins.mi6e4ka.dev",
-        "link": "https://jenkins.mi6e4ka.dev"
     },
 ]
 
